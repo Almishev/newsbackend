@@ -12,7 +12,10 @@ app.use(body_parser.json())
 
 if (process.env.mode === 'production') {
     app.use(cors({
-        origin: process.env.client_url,
+        origin: [
+            process.env.client_url,
+            process.env.admin_url
+        ],
         credentials: true
     }))
 } else {
