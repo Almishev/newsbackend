@@ -14,6 +14,7 @@ import WriterIndex from './dashboard/pages/WriterIndex'
 import CreateNews from './dashboard/pages/CreateNews'
 import storeContext from './context/storeContext'
 import Edit_news from './dashboard/pages/Edit_news'
+import NotFound from './dashboard/pages/NotFound'
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
 
           </Route>
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
